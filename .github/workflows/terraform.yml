@@ -1,4 +1,4 @@
-name: terraform
+name: testing environments
 on: push
 
 jobs:

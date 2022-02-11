@@ -13,7 +13,6 @@ jobs:
     needs: build
     environment:
       name: staging
-      url: https://github.com
     steps:
       - uses: actions/checkout@v2
       - run: echo 'deploying to staging with ${{ secrets.ENV_SECRET }}...'
@@ -23,7 +22,6 @@ jobs:
     needs: deploy-staging
     environment:
       name: production
-      url: https://github.com
     steps:
       - uses: actions/checkout@v2
       - run: echo 'deploying to production with ${{ secrets.ENV_SECRET }}...'
